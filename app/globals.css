@@ -24,3 +24,46 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+@keyframes ppQuoteIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* PhoenixPulse — subtle background glow (premium minimal) */
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -30%;
+  pointer-events: none;
+  z-index: -1;
+
+  background:
+    radial-gradient(700px 500px at 20% 25%, rgba(255, 255, 255, 0.14), transparent 60%),
+    radial-gradient(600px 420px at 80% 20%, rgba(255, 255, 255, 0.12), transparent 60%),
+    radial-gradient(900px 650px at 55% 85%, rgba(255, 255, 255, 0.10), transparent 65%);
+  
+  filter: blur(28px);
+  opacity: 1;
+}
+
+/* QuoteCard entrance animation (your class uses ppQuoteIn) */
+@keyframes ppQuoteIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
