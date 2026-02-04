@@ -1,4 +1,4 @@
-import QuoteCard from "../components/QuoteCard";
+import QuoteCard from "@/app/components/QuoteCard";
 
 export const metadata = {
   title: "Inspirational Quotes | PhoenixPulse",
@@ -42,7 +42,7 @@ export default function InspirationalQuotesPage() {
 
       <div className="space-y-6">
         {quotes.map((q, i) => (
-          <QuoteCard key={i} quote={q.quote} author={q.author} tag={q.tag} />
+          <QuoteCard key={i} quote={q} />
         ))}
       </div>
     </main>
