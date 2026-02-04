@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PhoenixPulse | Resilience, Healing & Inner Strength",
+  title: "PhoenixPulse | Rise. Rebuild. Repeat.",
   description:
-    "PhoenixPulse shares resilience quotes and reflections on healing, self-love, emotional strength, and rising after setbacks.",
+    "PhoenixPulse shares resilience quotes and reflections on healing, self-love, and inner strength.",
   keywords: [
     "resilience",
     "healing",
@@ -25,6 +25,9 @@ export const metadata: Metadata = {
     "emotional strength",
     "inspirational quotes",
   ],
+  verification: {
+    google: "mAbsG6GwkA25mpRw95TxQRV",
+  },
   metadataBase: new URL("https://phoenixpulse.vercel.app"),
   openGraph: {
     title: "PhoenixPulse | Rise. Rebuild. Repeat.",
