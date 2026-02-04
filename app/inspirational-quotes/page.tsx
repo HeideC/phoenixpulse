@@ -1,4 +1,4 @@
-import QuoteCard from "@/components/QuoteCard";
+import QuoteCard from "../components/QuoteCard";
 
 export const metadata = {
   title: "Inspirational Quotes | PhoenixPulse",
