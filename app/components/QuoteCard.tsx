@@ -11,11 +11,13 @@ type Quote = {
 export default function QuoteCard({
   quote,
   instagramUrl = "https://www.instagram.com/phoenixpul_se/",
-  facebookUrl,
+  facebookUrl = "https://www.facebook.com/profile.php?id=61576879443136",
+  isMostFelt = false,
 }: {
   quote: Quote;
   instagramUrl?: string;
   facebookUrl?: string;
+  isMostFelt?: boolean;
 }) {
   if (!quote?.quote) {
     return (
@@ -30,12 +32,11 @@ export default function QuoteCard({
     "group relative mt-6 rounded-2xl",
     "border border-white/20 bg-black/50",
     "p-8 pb-14",
-    "backdrop-blur-sm",
-    "transition-all duration-300 ease-out",
-    "hover:-translate-y-0.5 hover:border-white/40",
-    "ring-1 ring-white/20 hover:ring-white/40",
+    "backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-0.5",
+    isMostFelt ? "ring-2 ring-white/60" : "ring-1 ring-white/15 hover:ring-white/30",
+    "ring-offset-2 ring-offset-black/40",
   ].join(" ")}
->  
+>
       {/* subtle overlay */}
     <div className="pointer-events-none absolute inset-0 z-0 rounded-2xl bg-black/10" />  
 
@@ -75,15 +76,16 @@ export default function QuoteCard({
       {/* icons */}
       <div className="absolute bottom-6 right-6 z-20 flex items-center gap-4">
         {facebookUrl ? (
-          <a
-            href={facebookUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-            className="rounded-full border border-white/10 bg-black/20 p-2 transition hover:text-white hover:border-white/30"
-          >
-            <Facebook className="h-4 w-4" />
-          </a>
+          
+      <a
+  href={facebookUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-white/70 hover:text-white transition"
+  aria-label="Facebook"
+>
+  <Facebook size={18} />
+</a>    
         ) : null}
 
         <a
