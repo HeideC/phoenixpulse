@@ -28,7 +28,7 @@ export default function QuoteCard({
     <div
       className={[
         "group relative overflow-visible mt-6 rounded-2xl",
-        "border border-white/8 bg-black/15",
+        "border border-white/15 bg-black/40",
         "p-8 pb-14",
         "backdrop-blur transition-all duration-300 ease-out hover:-translate-y-1",
         "hover:border-white/25",
@@ -36,7 +36,7 @@ export default function QuoteCard({
       ].join(" ")}
     >
       {/* subtle overlay */}
-      <div className="pointer-events-none absolute inset-0 z-0 rounded-2xl bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-20" />
+    <div className="pointer-events-none absolute inset-0 z-0 rounded-2xl bg-black/10" />  
 
       <div
   
