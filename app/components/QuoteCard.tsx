@@ -25,16 +25,17 @@ export default function QuoteCard({
     );
   }
   return (
-    <div
-      className={[
-        "group relative overflow-visible mt-6 rounded-2xl",
-        "border border-white/15 bg-black/40",
-        "p-8 pb-14",
-        "backdrop-blur transition-all duration-300 ease-out hover:-translate-y-1",
-        "hover:border-white/25",
-"ring-2 ring-white/15 hover:ring-white/25 ring-offset-2 ring-offset-black/40 shadow-md shadow-black/60 hover:shadow-lg hover:shadow-black/70",
-      ].join(" ")}
-    >
+  <div
+  className={[
+    "group relative mt-6 rounded-2xl",
+    "border border-white/20 bg-black/50",
+    "p-8 pb-14",
+    "backdrop-blur-sm",
+    "transition-all duration-300 ease-out",
+    "hover:-translate-y-0.5 hover:border-white/40",
+    "ring-1 ring-white/20 hover:ring-white/40",
+  ].join(" ")}
+>  
       {/* subtle overlay */}
     <div className="pointer-events-none absolute inset-0 z-0 rounded-2xl bg-black/10" />  
 
